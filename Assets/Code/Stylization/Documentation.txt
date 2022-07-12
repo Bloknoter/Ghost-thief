@@ -1,0 +1,118 @@
+=======================Stylization framework=======================
+
+It is a n instruction of how to use this framework for stylization and how to extend it by user's code
+
+
+
+1. Stylization with ready components
+
+	You can give a style to several kinds of GUI elements withou coding. So, below you will 
+	find an example of how to give a style to your buttons
+	
+	a) Click on your button in the hierarchy list. Then click "add component -> Stylization -> Button style handler".
+
+	b) Then click right mouse button in project, and choose "Create -> styling -> New button style". Name it.
+
+	c) Now you have a created style for button. Click on it.
+
+	d) In the inspector you can see some fields to edit: Background Sprite, Background Color and Has text inside.
+
+	e) Choose your sprite for background and color. If you have button with text, check the Has text inside on true and
+	choose your font size, font and foreground color.
+
+	f) Then go to your button and look at Button style handler component.
+
+	g) There you can find a special field for stye. Drag your style object and drop it into this field.
+
+	h) Then go to your style object and press Apply. Your button will be stylized with your settings.
+
+	i) To change the style, just change the settings for your style and press Apply.
+
+	j) Of course, you can use this style for many buttons. It's very comfortable.
+	
+
+	Warning: after opening your project you can find that your style objects dusplay that
+	there are no elements with that style, but you now that there are. It happens because
+	elements with handle script are inactive or disabled. Activate or/and enable them.	
+
+	By this way you can stylize some other GUI elements. But if there is no style that is 
+	needed, you can create your own style pattern.
+
+
+2. Creating new style patterns (needs coding)
+
+	To create your own style pattern, you need to create 4 scripts. One is for 
+	representation of the style, second is for the handler for our style, and
+	two others are for custom editing. Below you wll find the instruction.
+
+	a) Create new script for your style. Take it into the namespace "Stylization" or write "using Stylization;".
+
+	b) Then inherit this script from class 'Style'.
+
+	c) Tag this class as "System.Serializable" and 
+	"[CreateAssetMenu(fileName = "New %your GUI element% style", menuName = "styling/New %your GUI element% style", order = 1)]"
+	By this stroke you will be able to create your style by context menu.
+
+	d) Write your properties in your class that you need, for example, public Color BGColor. Warning: they must be 
+	public or non-public with attribute "SerializeField". You have created your style pattern.
+
+	e) Create your script for your style handler. Take it into the namespace "Stylization" or write "using Stylization;".
+
+	f) Then inherit this script from class 'StyleHandler'.
+
+	g) Tag this class as "System.Serializable" and 
+	"[AddComponentMenu("Stylization/%your GUI element% style handler")]". By this stroke you will be able to add this script
+	to your GUI element by the AddComponent menu.
+
+	h) You have to override the "OnStyleHasChanged" method. There you need to write your code reaction on the chages that
+	are happened in your style. The simpliest way is to set some properties you need to values from your style (Your 
+	style object you can get in the inherited property "style". But you will need to cast it to the type of your style)
+
+	i) Then create a new script for custom editing your style object.
+
+	j) Take it into the namespace "Stylization" or write "using Stylization;".
+
+	k) Tag this class as "CustomEditor(typeof(%your style type%))" and 
+	"[CanEditMultipleObjects]"
+	
+
+	l) Write your editor as you wish. The only thing you have to do is to create button Apply and start a function 
+	"OnStyleHasChanged" in your style with the click on the button Apply. Warning: don't forget about methods 
+	"serializedObject.Update" in the beginning of "OnInspectorGUI" and "serializedObject.ApplyModifiedProperties" in the end.
+
+	m) Then create a new script for custom editing your style handler object.
+
+	n) Take it into the namespace "Stylization" or write "using Stylization;".
+
+	o) Tag this class as "CustomEditor(typeof(%your style type%))" and 
+	"[CanEditMultipleObjects]"
+
+	p) Write your editor as you wish. The only thing you have to do is to write "DrawStyleProperty();" 
+	between "serializedObject.Update" and "serializedObject.ApplyModifiedProperties". Warning: don't forget about methods 
+	"serializedObject.Update" in the beginning of "OnInspectorGUI" and "serializedObject.ApplyModifiedProperties" in the end.
+
+	q) Now you have created your own style pattern for your GUI element.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

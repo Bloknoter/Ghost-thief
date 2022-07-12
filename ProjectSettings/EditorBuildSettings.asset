@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/4 corners.unity
+    guid: cd2e063fccfd7cf4ba001556ee2a62b0
+  - enabled: 0
+    path: Assets/Scenes/lavaeye.unity
+    guid: 00f9cdc247538354dab2bf6672cf8340
+  m_configObjects: {}

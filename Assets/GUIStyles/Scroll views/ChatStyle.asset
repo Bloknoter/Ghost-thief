@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad8c5ec2087957499c0fa794bb88643, type: 3}
+  m_Name: ChatStyle
+  m_EditorClassIdentifier: 
+  ScrollBarHandlerSprite: {fileID: 21300000, guid: 9aed9581fe72d67419e7d471d40ac6fd,
+    type: 3}
+  ScrollBarHandlerColor: {r: 0.6627451, g: 0.09411766, b: 0.019607844, a: 1}
+  ScrollBarBGColor: {r: 0.26415092, g: 0.1772576, b: 0.13830543, a: 1}
+  BGSprite: {fileID: 21300000, guid: decfde4d89d8f3c45ac8e7f0668e94e2, type: 3}
+  BGColor: {r: 1, g: 1, b: 1, a: 1}

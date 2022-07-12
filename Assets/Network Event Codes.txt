@@ -1,0 +1,11 @@
+Reserved codes
+
+0   :	MatchMaker; Receiving data from master client about all players in room
+
+1   :	MatchMaker; Receiving data from a new connected player
+
+2   :	EnergyBomb; Receiving info about the hit of a "main" bomb
+
+3   :	BasePlayer; Receiving info about the hit to me by some bomb
+
+100 :	SyncMapObject; Receiving data from other map object

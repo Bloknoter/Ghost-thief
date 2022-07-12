@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0649: Полю "CameraController.MyCamera" нигде не присваивается значение, поэтому оно всегда будет иметь значение по умолчанию null.
+dotnet_diagnostic.CS0649.severity = none

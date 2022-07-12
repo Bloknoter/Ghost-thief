@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5667607472412090872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18cf4f4af820844b15540eaecd9384, type: 3}
+  m_Name: Page
+  m_EditorClassIdentifier: 
+  Name: main
+  objectindex: 0
+  transitions:
+  - settings
+  - how to play
+  - online menu
+--- !u!114 &-2458230868165858206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18cf4f4af820844b15540eaecd9384, type: 3}
+  m_Name: Page
+  m_EditorClassIdentifier: 
+  Name: how to play
+  objectindex: 2
+  transitions:
+  - main
+--- !u!114 &-262385711209547904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18cf4f4af820844b15540eaecd9384, type: 3}
+  m_Name: Page
+  m_EditorClassIdentifier: 
+  Name: settings
+  objectindex: 1
+  transitions:
+  - main
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99de311c0adee52418df1a51e7a6b739, type: 3}
+  m_Name: PagesData
+  m_EditorClassIdentifier: 
+  pages:
+  - {fileID: 3872332786453299720}
+  - {fileID: 7787484724140051445}
+  - {fileID: -2458230868165858206}
+  - {fileID: -262385711209547904}
+  - {fileID: -5667607472412090872}
+--- !u!114 &3872332786453299720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18cf4f4af820844b15540eaecd9384, type: 3}
+  m_Name: Page
+  m_EditorClassIdentifier: 
+  Name: matchboard
+  objectindex: 4
+  transitions:
+  - online menu
+--- !u!114 &7787484724140051445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba18cf4f4af820844b15540eaecd9384, type: 3}
+  m_Name: Page
+  m_EditorClassIdentifier: 
+  Name: online menu
+  objectindex: 3
+  transitions:
+  - matchboard
+  - main
